@@ -2,19 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Royal Palace Hotel & Restro | Bargarh, Odisha</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
       body {
         font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+        width: 100vw;
       }
       h1, h2, h3, .font-serif {
         font-family: 'Playfair Display', serif;
       }
       .booking-gradient {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      }
+      @keyframes bounce-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .animate-bounce-slow {
+        animation: bounce-slow 3s ease-in-out infinite;
+      }
+      /* Prevent horizontal scroll on mobile */
+      #root {
+        overflow-x: hidden;
       }
     </style>
   <script type="importmap">
@@ -33,7 +46,6 @@
 </head>
   <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
-    <!-- Explicitly import the entry point for Netlify/Vite -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
