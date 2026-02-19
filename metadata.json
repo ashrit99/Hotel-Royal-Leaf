@@ -1,0 +1,7 @@
+{
+  "name": "Royal Palace Hotel & Restro",
+  "description": "A professional hotel and restaurant website for Royal Palace in Bargarh, Odisha, featuring online booking, gallery, and service details.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
